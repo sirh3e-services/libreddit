@@ -2,8 +2,6 @@ name: Docker ARM Build
 
 on:
   push:
-    paths-ignore:
-      - "**.md"
     branches:
       - master
 

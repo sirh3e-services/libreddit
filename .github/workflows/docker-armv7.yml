@@ -2,8 +2,6 @@ name: Docker ARM V7 Build
 
 on:
   push:
-    paths-ignore:
-      - "**.md"
     branches:
       - master
 
