@@ -8,7 +8,7 @@ mod search;
 mod settings;
 mod subreddit;
 mod user;
-mod utils;
+mod utils; 
 
 // Import Crates
 use clap::{Arg, Command};
