@@ -32,10 +32,25 @@
     "LIBREDDIT_DEFAULT_SHOW_NSFW": {
       "required": false
     },
+    "LIBREDDIT_DEFAULT_BLUR_NSFW": {
+      "required": false
+    },
     "LIBREDDIT_USE_HLS": {
       "required": false
     },
     "LIBREDDIT_HIDE_HLS_NOTIFICATION": {
+      "required": false
+    },
+    "LIBREDDIT_SFW_ONLY": {
+      "required": false
+    },
+    "LIBREDDIT_DEFAULT_HIDE_AWARDS": {
+      "required": false
+    },
+    "LIBREDDIT_BANNER": {
+      "required": false
+    },
+    "LIBREDDIT_DEFAULT_DISABLE_VISIT_REDDIT_CONFIRMATION": {
       "required": false
     }
   }
