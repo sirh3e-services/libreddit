@@ -26,6 +26,8 @@
 	--popup-goback-background: var(--popup-red);
 	--popup-goback-text: #222;
 	--popup-border: 1px solid var(--popup-red);
+
+	--footer-height: 30px;
 }
 
 @font-face {
@@ -99,6 +101,9 @@ body {
 	background: var(--background);
 	font-size: 15px;
 	padding-top: 60px;
+	padding-bottom: var(--footer-height);
+	min-height: calc(100vh - 60px);
+	position: relative;
 }
 
 nav {
@@ -140,12 +145,6 @@ nav #links {
 
 nav #links svg {
 	display: none;
-}
-
-nav #version {
-	opacity: 50%;
-	vertical-align: -2px;
-	margin-right: 10px;
 }
 
 nav #libreddit {
@@ -270,6 +269,7 @@ main {
 	max-width: 1000px;
 	padding: 10px 20px;
 	margin: 0 auto;
+	padding-bottom: 4em;
 }
 
 .wide main {
@@ -292,22 +292,22 @@ main {
 body > footer {
 	display: flex;
 	justify-content: center;
-	margin: 20px;
+	align-items: center;
+	width: 100vw;
+	background: var(--post);
+	position: absolute;
+	bottom: 0;
 }
 
-.info-button {
+.footer-button {
 	align-items: center;
 	border-radius: .25rem;
 	box-sizing: border-box;
 	color: var(--text);
 	cursor: pointer;
 	display: inline-flex;
-	font-size: 150%;
-	padding: 0.5em;
-}
-
-.info-button > a:hover {
-	text-decoration: none;
+	padding-left: 1em;
+	opacity: 0.8;
 }
 
 /* / Body footer. */
@@ -1508,7 +1508,10 @@ td, th {
 /* Mobile */
 
 @media screen and (max-width: 800px) {
-	body { padding-top: 120px }
+	body {
+		padding-top: 120px;
+		padding-bottom: var(--footer-height);
+	}
 
 	main {
 		flex-direction: column-reverse;
@@ -1550,8 +1553,10 @@ td, th {
 }
 
 @media screen and (max-width: 480px) {
-	body { padding-top: 100px; }
-	#version { display: none; }
+	body {
+		padding-top: 100px;
+		padding-bottom: var(--footer-height);
+	}
 
 	.post {
 		grid-template: 	"post_header post_header post_thumbnail" auto
